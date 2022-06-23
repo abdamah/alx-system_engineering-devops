@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R u=rwx,go=rx *
+find . -type d -exec chmod 755 {} \;
