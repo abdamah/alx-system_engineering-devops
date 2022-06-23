@@ -1,1 +1,2 @@
-0  string  School= "SCHOOL"
+0  string  School="School data"
+!:mime School
