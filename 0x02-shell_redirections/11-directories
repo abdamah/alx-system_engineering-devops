@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -path . -type d -print -ls | wc -l
+find -path . -type d -print -ls | wc -l
