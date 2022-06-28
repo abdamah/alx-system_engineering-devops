@@ -1,0 +1,2 @@
+#!/bin/bash
+TRUEKNOWLEDGE=$((1+2+8))
