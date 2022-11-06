@@ -78,4 +78,4 @@ Complete the 9 next tasks, getting to 27 total.
 
 
 ## Review Link
-![](https://alx-intranet.hbtn.io/corrections/6079302/correct)
+![https://alx-intranet.hbtn.io/corrections/6079302/correct](https://alx-intranet.hbtn.io/corrections/6079302/correct)
