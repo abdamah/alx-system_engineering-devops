@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script is used for FizzBuzz game
+number=1
+
+while [ $number -le 100 ]
+do
+    if [ $(( number % 3 )) -eq 0 ] && [ $(( number % 5 )) -eq 0 ]
+    then
+        echo "FizzBuzz"
+    elif [ $(( number % 3 )) -eq 0 ]
+    then
+        echo "Fizz"
+    elif [ $(( number % 5 )) -eq 0 ]
+    then
+        echo "Buzz"
+    else
+        echo $number
+    fi
+    number=$(( number + 1 ))
+done
