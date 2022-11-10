@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Script that displays Best School 10 times
+i=1;
+until [ $i -ge 11 ];
+do 
+	echo "Best School"; 
+	((i++));
+done
