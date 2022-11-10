@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script that displays content
+list=$(ls)
+for file in $list
+do
+	echo "$file" | cut -d "-" -f 2
+done
