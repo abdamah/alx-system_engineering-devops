@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # comments go here!
-# trap: receive signal
+# trap: receive SIGQUIT or SIGTERM signal
 echo $$ >> /var/run/holbertonscript.pid
 trap "echo Y U no love me?!" SIGINT
 trap "echo I hate the kill command && rm -rf /var/run/holbertonscript.pid; exit" SIGTERM SIGQUIT
