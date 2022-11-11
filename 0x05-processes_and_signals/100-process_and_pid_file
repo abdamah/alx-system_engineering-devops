@@ -1,11 +1,32 @@
 #!/usr/bin/env bash
-# comments go here!
-# trap: receive SIGQUIT or SIGTERM signal
-echo $$ >> /var/run/holbertonscript.pid
-trap "echo Y U no love me?!" SIGINT
-trap "echo I hate the kill command && rm -rf /var/run/holbertonscript.pid; exit" SIGTERM SIGQUIT
-while :
+# prints the message infinity and beyon for 
+# eternity unless killed
+echo $$ > /var/run/myscript.pid
+
+close()
+{
+  echo "$1"
+  return
+}
+
+delete_file()
+{
+  if [ -e "/var/run/myscript.pid" ]
+  then
+    rm /var/run/myscript.pid
+  fi
+}
+# SIGTERM
+trap "close 'I hate the kill command' && delete_file && exit" SIGTERM
+
+# SIGINT
+trap "close 'Y U no love me?!' && exit"  SIGINT
+
+# SIGQUIT
+trap "delete_file && exit" SIGQUIT
+
+while true;
 do
-	echo "To infinity and beyond"
-	sleep 2
+  echo "To infinity and beyond";
+  sleep 2
 done
